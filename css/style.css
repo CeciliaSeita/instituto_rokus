@@ -24,7 +24,9 @@ body {
   grid-template-columns: 100%;
   width: 100%;
   margin: 0 auto;
-  grid-template-areas: "header" "main" "footer"; }
+  grid-template-areas: "header"
+ "main"
+ "footer"; }
 
 header {
   grid-area: header;
@@ -146,14 +148,14 @@ main {
   CURSOS 
   --------------------------------------------------------------*/
 .presentacionCursos {
-  background-image: url("/resources/fondo-login.jpg");
+  background-image: url("../resources/fondo-login.jpg");
   background-size: contain;
   margin-top: 0%;
   margin-left: 0%;
   margin-right: 0%; }
 
 .instituto {
-  background-image: url("/resources/fondo-login.jpg");
+  background-image: url("../resources/fondo-login.jpg");
   margin: auto;
   max-width: 100%;
   padding: 7%; }
@@ -236,7 +238,7 @@ main {
   pilates/box/emujer
   -------------------------- */
 .containerActividad {
-  background-image: url("/resources/fondo-login.jpg");
+  background-image: url("../resources/fondo-login.jpg");
   padding: 5%;
   font-size: 1rem;
   color: white;
@@ -281,7 +283,7 @@ main {
 .containerServicios {
   margin-top: 0%;
   text-align: justify;
-  background-image: url("/resources/fondo-login.jpg");
+  background-image: url("../resources/fondo-login.jpg");
   width: 100%;
   height: max-content;
   color: whitesmoke; }
@@ -478,7 +480,9 @@ main {
     align-items: center;
     grid-template-columns: 2fr;
     grid-template-rows: 3fr;
-    grid-template-areas: "imagenPilates infoPilates" "imagenMujer infoMujer" "imagenPower infoPower"; }
+    grid-template-areas: "imagenPilates infoPilates"
+ "imagenMujer infoMujer"
+ "imagenPower infoPower"; }
   .instituto__parrafo {
     line-height: 200%; }
   /* --------------------------------------------------------

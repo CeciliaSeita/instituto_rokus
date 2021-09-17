@@ -109,7 +109,7 @@ html {
   LOGIN 
   ------------------------------------------------------------ */
   .formulario {
-    background-image: url("/resources/fondo-login.jpg");
+    background-image: url("../resources/fondo-login.jpg");
     width: 100%;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -170,14 +170,14 @@ html {
   CURSOS 
   --------------------------------------------------------------*/
   .presentacionCursos {
-    background-image: url("/resources/fondo-login.jpg");
+    background-image: url("../resources/fondo-login.jpg");
     background-size: contain;
     margin-top: 0%;
     margin-left: 0%;
     margin-right: 0%; }
   
   .instituto {
-    background-image: url("/resources/fondo-login.jpg"); 
+    background-image: url("../resources/fondo-login.jpg"); 
     margin: auto;
     max-width: 100%;
     padding: 7%; }
@@ -250,7 +250,7 @@ html {
   
   
   .containerActividad { 
-    background-image: url("/resources/fondo-login.jpg");
+    background-image: url("../resources/fondo-login.jpg");
     padding: 5%;
     font-size: 1rem;
     color: white;
@@ -289,7 +289,7 @@ html {
   .containerServicios { 
     margin-top: 0%;
     text-align: justify;
-    background-image: url("/resources/fondo-login.jpg");
+    background-image: url("../resources/fondo-login.jpg");
     width: 100%;
     height: max-content;
     color: whitesmoke; }
