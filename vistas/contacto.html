@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https: //fonts.googleapis.com/css2? family = Poppins: wght @ 500 & display = swap " rel=" stylesheet ">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mquery.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container">
+                <a class="navbar-brand imagenLogo" href="./index.html"><img src="/resources/logo-amarillo.png"
+                        alt="logo" width="160" height="160"></a>
+            </div>
+
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vistas/login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vistas/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vistas/servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"> Cursos</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="../vistas/cursos.html">Todos los cursos</a></li>
+                            <li><a class="dropdown-item" href="../vistas/pilates.html">Pilates Reformer</a></li>
+                            <li><a class="dropdown-item" href="../vistas/emujer.html">Entrenamiento para la mujer</a>
+                            </li>
+                            <li><a class="dropdown-item" href="../vistas/box.html">Power Box</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="formulario">
+        <div class="formLogin">
+            <form action="#" method="POST" class="fondo-gris">
+                <label for="nombre">Nombre</label>
+                <input class="usuario" type="text" id="nombre" required>
+                <br>
+                <label for="apellido">Apellido</label>
+                <input class="usuario" type="text" id="apellido" required>
+                <br>
+                <label for="email">email</label>
+                <input class="usuario" type="email" id="email" required>
+                <br>
+                <label for="pais">Pais</label>
+                <select id="pais">
+                    <option>Selecciona una opcion</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="peru">Peru</option>
+                    <option value="chile">Chile</option>
+                    <option value="bolivia">Bolivia</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="formLogin sinTop">
+            <form action="#" method="POST" class="fondo-gris">
+                <p>En que curso estas interesado?</p>
+
+                <input type="radio" name="cursos" value="pilates">Pilates
+                <input type="radio" name="cursos" value="entrenamiento de la Mujer">Entrenamiento de la Mujer
+                <input type="radio" name="cursos" value="entrenamiento HITT">Power Box
+                <input type="radio" name="cursos" value="coaching Deportivo">Coaching Deportivo
+                <br>
+                <p>En que servicio estas interesado?</p>
+                <input type="radio" name="servicios" value="coaching deportivo">Coaching Deportivo
+                <input type="radio" name="servicios" value="nutricion deportiva">Nutricion Deportiva
+            </form>
+            <br>
+            <form action="#" method="POST" class="fondo-gris">
+                <input type="checkbox" name="acepta" value="1" id="condiciones">
+                <label for="condiciones" class="sinBorde">Acepta Terminos y condiciones</label>
+                <br>
+                <button class="botonLogin" type="reset" name="resetear">Reset</button>
+                <button class="botonLogin" type="submit" name="Enviar">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="containerFooter">
+            
+        <div class="containerFooter__terminos">
+            <a class="containerFooter__links" href="#">Terminos y condiciones</a>
+            <a class="containerFooter__links"href="#">Politica de Privacidad</a>
+        </div>
+
+        <div class="containerFooter__redes">
+            <a href="https://www.facebook.com/rokus.gimnasio"><i class="fab fa-facebook-square containerFooter--blanco" ></i></a>                       
+            <a href="https://www.instagram.com/rokus_gimnasio"><i class="fab fa-instagram containerFooter--blanco"></i></a>
+
+            <a href="#"><i class="fab fa-youtube containerFooter--blanco"></i></a>
+            <a href="#"><i class="fas fa-envelope-square containerFooter--blanco"></i></a>
+        </div>          
+
+        <div class="containerFooter__whatsapp">
+            <a href="#">Escribinos!<span class="material-icons-outlined">whatsapp</span></a>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/2878ee037e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
