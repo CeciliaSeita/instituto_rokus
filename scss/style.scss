@@ -1,3 +1,7 @@
+// VARIABLES
+
+$fondo_paginas: url("../resources/fondo-login.jpg");
+
 html {
     font-size: 62.5%;
     margin: 0%;
@@ -6,7 +10,7 @@ html {
   
   body {
     font-size: 16px;
-    background-color: rgb(31, 31, 31);
+    background-color: #212529;
     font-family: 'Poppins', sans-serif;
     width: 100vw;
     height: 100%;
@@ -32,7 +36,7 @@ html {
 // HEADER-------------------------------------------------------------
   
   header {
-    grid-area: header;
+  grid-area: header;
   width: 100%;
   position: fixed;
   margin-top: 0%;
@@ -45,12 +49,13 @@ html {
   }
   .container{
     margin-left: 5%;
+    width: 0%;
   }
   .navbar-nav{
     width: 100%;
   }
   .dropdown-menu{
-    background-color:rgb(225, 225, 225);
+    background-color: #e1e1e1;;
     
   }
   .dropdown-item{
@@ -68,7 +73,9 @@ html {
     transform: scale(1.5);
     transition-duration: 2s;
   }
-  
+  .container-fluid{
+    width: 0%;
+  }
   
   /*----------------------------------------------------------------
   MAIN
@@ -80,28 +87,28 @@ html {
   
   .carousel-caption h4 {
     font-size: 2rem;
-    margin-bottom: 3%;
-    color: black;
+    margin-bottom: 3%;   
     font-weight: bolder;     
   }
   
-  .carousel-caption h5 {
-    font-size: 2rem;
+  .carousel-caption h2 {
+    font-size: 1.5rem;
     margin-bottom: 3%;
+    font-weight: bolder;
   }
   
   .carousel-caption button {
-    font-size: 2rem;    
+    font-size: 1.8rem;
+    font-weight: bolder;    
   }
   .carousel-caption button a{
-    font-size: 2rem; 
+    font-size: 1rem; 
     text-decoration: none;
     color: white;
   }
   .carousel-caption  p{
     font-size: 6rem; 
-    color: black;
-  }
+    }
   
   
   
@@ -109,7 +116,7 @@ html {
   LOGIN 
   ------------------------------------------------------------ */
   .formulario {
-    background-image: url("../resources/fondo-login.jpg");
+    background-image: $fondo_paginas;
     width: 100%;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -124,14 +131,10 @@ html {
     font-weight: bolder;
     font-size: 1rem; 
     margin-top: 200px;}
-  
 
     .sinTop{
-      margin-top: 20px;
+    margin-top: 20px;
     }   
-    
-  
-
 
   .formLogin a {
     color: white; }
@@ -170,14 +173,14 @@ html {
   CURSOS 
   --------------------------------------------------------------*/
   .presentacionCursos {
-    background-image: url("../resources/fondo-login.jpg");
+    background-image: $fondo_paginas;
     background-size: contain;
     margin-top: 0%;
     margin-left: 0%;
     margin-right: 0%; }
   
   .instituto {
-    background-image: url("../resources/fondo-login.jpg"); 
+    background-image: $fondo_paginas; 
     margin: auto;
     max-width: 100%;
     padding: 7%; }
@@ -196,15 +199,11 @@ html {
   
   .containerCursos {
     margin: 0%;
-    width: 100vh; }
-  
-  .imagenPilates {
-    grid-area: imagenPilates; }
+    width: 100%; }
   
   .infoPilates {
-    grid-area: infoPilates;
     padding: 5%;
-    text-align: justify; }
+    text-align: justify; }    
     .infoPilates .infoPilates__title {
       font-size: 1.5rem;
       color: whitesmoke;
@@ -214,11 +213,7 @@ html {
     .infoPilates .infoPilates__link {
       color: whitesmoke; }
   
-  .imagenMujer {
-    grid-area: imagenMujer; }
-  
   .infoMujer {
-    grid-area: infoMujer;
     padding: 5%; }
     .infoMujer .infoMujer__title {
       font-size: 1.5rem;
@@ -228,12 +223,9 @@ html {
       text-align: justify; }
     .infoMujer .infoMujer__link {
       color: whitesmoke; }
-  
-  .imagenPower {
-    grid-area: imagenPower; }
+
   
   .infoPower {
-    grid-area: infoPower;
     padding: 5%; }
     .infoPower .infoPower__title {
       font-size: 1.5rem;
@@ -247,10 +239,22 @@ html {
   /* -------------------------------------------------
   pilates/box/emujer
   -------------------------- */
-  
+  .tituloActividad{
+    padding-top: 225px;
+    background-color: gray;
+    padding-bottom: 0%;
+    height: 280px; 
+    }
+    .tituloActividad h2{
+      font-size: 1.8rem;
+      color: white;
+      text-align: center;
+      font-weight: bolder;
+      margin-bottom: 0%;
+    } 
   
   .containerActividad { 
-    background-image: url("../resources/fondo-login.jpg");
+    background-image: $fondo_paginas;
     padding: 5%;
     font-size: 1rem;
     color: white;
@@ -259,7 +263,6 @@ html {
     align-items: center; }
   
   .modalidad {
-    margin-top: 190px;
     padding: 2%; }
     .modalidad .modalidad__titulo {
       font-size: 1.3rem;
@@ -289,7 +292,7 @@ html {
   .containerServicios { 
     margin-top: 0%;
     text-align: justify;
-    background-image: url("../resources/fondo-login.jpg");
+    background-image: $fondo_paginas;
     width: 100%;
     height: max-content;
     color: whitesmoke; }
@@ -310,7 +313,7 @@ html {
       font-size: 1rem; }
       .containerServicios .containerServicios__sinTop {
         margin-top: 10px;
-         }
+      }
   
   /* ------------------------------------------------------
   FOOTER
@@ -367,10 +370,34 @@ html {
   -------------------------------------------------------------*/
   
   @media only screen and (min-width: 576px) {
+
+  // MAIN --------------------------------------------------------
+
+  .carousel-caption h4 {
+    font-size: 2rem;
+    margin-bottom: 3%;
+    color: black;
+    font-weight: bolder; }
+  
+  .carousel-caption h5 {
+    font-size: 2rem;
+    margin-bottom: 3%; }
+  
+  .carousel-caption button {
+    font-size: 2rem; }
+  
+  .carousel-caption button a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white; }
+  
+  .carousel-caption p {
+    font-size: 6rem;}
   
   /* -----------------------------------------------------------
   SERVICIOS 
   -------------------------------------------------------------*/
+
     .containerServicios .containerServicios__parrafo {
       font-size: 1.5rem;
       color: black; }
@@ -407,12 +434,16 @@ html {
   /* ---------------------------------------------
   cursos
   -------------------------------------------------- */
-  
+  .containerCursos{
+    margin: auto;
+    width: 100%;
+  }
+  .imagenPilates {
+    width: max-content; }
   .instituto .instituto__titulo{
     margin-top: 5%;
   }
-  .containerCursos {
-    width: 100vh; }
+  
     
     
   /* -------------------------------------------------------------
@@ -428,7 +459,6 @@ html {
       color:black;
     }
     .modalidad {    
-      margin-top: 150px;
       padding: 3%;
       width: 50%; }
     .modalidad .modalidad__titulo {
@@ -436,7 +466,6 @@ html {
       text-align: left; }
       
     .contenido {
-      margin-top: 150px;
       padding: 3%;
       width: 50%; }
     .contenido .contenido__titulo {
@@ -478,6 +507,10 @@ html {
   MEDIA QUERY MIN 1024
   ------------------------------------------------ */
   @media only screen and (min-width: 1024px) {
+
+    .container-fluid{
+      width: 100%;
+    }
     .containerServicios {
       display: flex; }
     .containerCursos p {
@@ -497,13 +530,21 @@ html {
       display: grid;
       width: 100%;
       align-items: center;
-      grid-template-columns: 2fr;
+      grid-template-columns: 1fr 2fr;
       grid-template-rows: 3fr;
       grid-template-areas: "imagenPilates infoPilates"
-   "imagenMujer infoMujer"
-   "imagenPower infoPower"; }
+    "imagenMujer infoMujer"
+    "imagenPower infoPower"; }
+
     .instituto__parrafo {
       line-height: 200%; } 
+    
+      .imagenPilates {
+        grid-area: imagenPilates; }
+      .imagenMujer {
+        grid-area: imagenMujer; }
+      .imagenPower {
+        grid-area: imagenPower; }
   
   /* --------------------------------------------------------
   footer 
