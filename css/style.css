@@ -24,7 +24,9 @@ body {
   grid-template-columns: 100%;
   width: 100%;
   margin: 0 auto;
-  grid-template-areas: "header" "main" "footer"; }
+  grid-template-areas: "header"
+ "main"
+ "footer"; }
 
 header {
   grid-area: header;
@@ -35,6 +37,10 @@ header {
 
 .navbar-collapse {
   margin-right: 30%; }
+.bg-dark{
+  background-color: none !important
+  ;
+}
 
 .container {
   margin-left: 5%;
@@ -314,8 +320,7 @@ main {
 /* ------------------------------------------------------
   FOOTER
   ------------------------------------------------------- */
-.containerFooter {
-  padding: 5%;
+.containerFooter {  
   grid-area: footer;
   width: 100%;
   color: white;
@@ -421,7 +426,8 @@ main {
   -------------------------------------------------- */
   .containerCursos {
     margin: auto;
-    width: 100%; }
+    width: 100%; 
+  }
   .imagenPilates {
     width: max-content; }
   .instituto .instituto__titulo {
@@ -495,13 +501,16 @@ main {
     width: 100%; }
   .containerCursos {
     margin: 0%;
+    padding-bottom: 3%;
     padding-left: 7%;
     display: grid;
     width: 100%;
     align-items: center;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 3fr;
-    grid-template-areas: "imagenPilates infoPilates" "imagenMujer infoMujer" "imagenPower infoPower"; }
+    grid-template-areas: "imagenPilates infoPilates"
+ "imagenMujer infoMujer"
+ "imagenPower infoPower"; }
   .instituto__parrafo {
     line-height: 200%; }
   .imagenPilates {
