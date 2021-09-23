@@ -37,10 +37,7 @@ header {
 
 .navbar-collapse {
   margin-right: 30%; }
-.bg-dark{
-  background-color: none !important
-  ;
-}
+
 
 .container {
   margin-left: 5%;
@@ -96,6 +93,29 @@ main {
 
 .carousel-caption p {
   font-size: 6rem; }
+
+.error{ 
+  height: 40vh;
+  display: flex; 
+}
+.main-content { 
+  padding-top: 30%;
+  margin: auto;
+  color: black;
+  text-align: center;
+  background-color: grey;
+  height: 100vh;
+}
+.main-content h1{
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.main-content a{
+  color: #cecec3;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+      
 
 /*----------------------------------------------------------
   LOGIN 
@@ -392,6 +412,32 @@ main {
     color: white; }
   .carousel-caption p {
     font-size: 6rem; }
+
+  /* ------------------------------------------
+  MAIN
+  ------------------------------------------ */
+ 
+  .main-content { 
+    padding-top: 2%;
+    margin: auto;
+    color: black;
+  }
+  .main-content h1{   
+    font-size: 6rem;   
+  }
+  .main-content a{   
+    font-size: 2rem;
+  }
+
+  .error{ 
+    height: 80vh;
+    margin: auto;    
+    background-color: grey;  
+  }
+  .error img{
+    margin: auto;
+  }
+
   /* -----------------------------------------------------------
   SERVICIOS 
   -------------------------------------------------------------*/
@@ -494,6 +540,9 @@ main {
     text-align: justify; }
   .containerCursos h6 {
     width: 70vw; }
+
+    .main-content { 
+      padding-top: 15%;}
   /* --------------------------------------------------
   CURSOS
   ---------------------------------------------------------*/
