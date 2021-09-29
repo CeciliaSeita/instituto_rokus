@@ -33,6 +33,7 @@ header {
   width: 100%;
   position: fixed;
   margin-top: 0%;
+  padding: 0%;
   z-index: +1; }
 
 .navbar-collapse {
@@ -42,20 +43,28 @@ header {
   font-size: 18px;
   color: white;
 }
-
+.navbar-toggler{
+  background-color: rgb(33, 32, 32);
+}
 .container {
   margin-left: 5%;
-  width: 0%; }
+  width: 0%; 
+  z-index: +2;
+}
+  .navbar{
+    padding: 0%;
+  }
 
 .navbar-nav {
-  width: 100%; }
+  width: 100%;
+  z-index: +2;
+}
 .dropdown-item {
   font-size: 1.5rem;
   font-weight: bolder; }
 
 .nav-item {
   width: 100%;
-  padding: 5%;
   font-size: 1.8rem; }
 
 .imagenLogo:hover {
@@ -63,7 +72,8 @@ header {
   transition-duration: 2s; }
 
 .container-fluid {
-  width: 0%; }
+  width: 0%;
+margin-top: 8%; }
 
 /*----------------------------------------------------------------
   MAIN
@@ -142,6 +152,7 @@ main {
 .main-content button{
   border-radius: 7px;    
 }
+
 .main-content button:hover{
   transform: scale(1.3);
   transition-duration: 2s;
@@ -377,44 +388,35 @@ main {
   font-size: 2rem;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "terminos redes whatsapp"; }
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:  "redes" "terminos"; }
 
 .containerFooter .containerFooter__links {
   color: white;
   padding: 3%;
   margin-top: 2%;
-  font-size: 1rem; }
+  font-size: 1.2rem; }
 
 .containerFooter .containerFooter__terminos {
-  padding-left: 10%;
-  padding-top: 5%;
+  text-align: center;
   grid-area: terminos;
-  display: flex;
-  flex-direction: column; }
+  }
 
 .containerFooter .containerFooter__redes {
   grid-area: redes;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
+  text-align: center;
+  padding-top: 5%;   
 }
 
 .containerFooter .containerFooter--blanco {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 2%; }
+  
 
-.containerFooter .containerFooter__whatsapp {
-  background-color:#25D663;
-  grid-area: whatsapp;
-  height: max-content;
-  width: min-content;
-  font-weight: bolder;
-  font-size: 1rem;
-  padding: 3%;
-  border-radius: 50px; 
-  margin-left: 25%;
+.material-icons-outlined{
+  font-size: 2rem;
 }
 
 .containerFooter .containerFooter__whatsapp a {
@@ -434,25 +436,31 @@ main {
   -------------------------------------------------------------*/
 @media only screen and (min-width: 576px) {
 
-
+ 
   /* ------------------------------------------
   MAIN
   ------------------------------------------ */
- 
+
+.nav-item{
+  background-color: rgb(255, 193, 7);
+  padding: 2% 5%;
+  border-radius: 7%;
+}
+
   .main-content { 
     padding-top: 2%;
     margin: auto;
-    /* color: black; */
+   
   }
   .main-content h1{   
-    font-size: 6rem;
+    font-size: 4rem;
     text-shadow: -4px 1px rgb(55, 54, 54) ;   
   }
   .main-content a{   
     font-size: 2rem;
   }
   .main-content p{   
-    font-size: 3rem;
+    font-size: 2rem;
     text-shadow: -4px 1px rgb(55, 54, 54);
   }
 
@@ -534,11 +542,9 @@ main {
   /* ------------------------------------------------------
   footer 
   -----------------------------------------------------------*/
-  .containerFooter {
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: flex-start; }
-  .containerFooter .containerFooter__terminos {
-    width: 90%; }
+  .containerFooter{
+    height: 80px;
+  }
   .containerFooter .containerFooter__links {
     padding: 3%;
     margin-top: 2%;
@@ -550,11 +556,8 @@ main {
     width: 100%; }
   .containerFooter .containerFooter--blanco {
     font-size: 3rem; }
-  .containerFooter .containerFooter__whatsapp {
-    margin-top: 10%;
-    margin: auto; }
-    .material-icons-outlined{
-      font-size: 35px;
+  .material-icons-outlined{
+      font-size: 3rem;
     } }
 
 /* -----------------------------------------
@@ -573,6 +576,12 @@ main {
 
     .main-content { 
       padding-top: 15%;}
+      .main-content p{   
+        font-size: 3rem;
+      }
+      .main-content h1{   
+        font-size: 6rem;
+      }
   /* --------------------------------------------------
   CURSOS
   ---------------------------------------------------------*/
