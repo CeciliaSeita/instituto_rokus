@@ -18,13 +18,17 @@
 </head>
 
 <body>
-
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+            
             <div class="container">
                 <a class="navbar-brand imagenLogo" href="../index.html"><img src="../resources/logo-amarillo.png"
                         alt="logo Rokus" width="160" height="160"></a>
             </div>
+            <div class="capa"></div>
+                
+            
 
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -58,54 +62,53 @@
                 </ul>
             </div>
         </nav>
-
     </header>
 
     <main class="formulario">
+        
         <div class="formLogin">
             <form action="#" method="POST">
 
-                <label for="usuario">Usuario</label>
-                <input class="usuario" type="text" id="usuario" required>
+                <label for="usuario"></label>
+                <input class="usuario" type="text" id="usuario" required placeholder="Usuario">
 
-                <label for="contraseña">Contraseña</label>
-                <input class="usuario" type="text" id="contraseña" required>
+                <label for="contraseña"></label>
+                <input class="usuario" type="text" id="contraseña" required placeholder="Contraseña">
 
-                <label for="recordar" class="sinBorde">Remember me?</label>
+                <label for="recordar">Recordarme?</label>
                 <input type="checkbox" name="aceptar" value="1" id="recordar">
 
-                <button class="botonLogin" type="reset" name="resetear">Reset</button>
+                <button class="botonLogin" type="reset" name="resetear">Resetear</button>
                 <button class="botonLogin" type="submit" name="Enviar">Enviar</button>
-                <br>
-                <br>
-                <a href="./login.html">No estas registrado? </a>
+               
+                <a href="../vistas/404.html">No estas registrado? </a>
             </form>
         </div>
     </main>
 
     <footer class="containerFooter">
-        <div class="containerFooter__terminos">
-            <a class="containerFooter__links" href="../vistas/404.html">Terminos y condiciones</a>
-            <a class="containerFooter__links" href="../vistas/404.html">Politica de Privacidad</a>
-        </div>
 
         <div class="containerFooter__redes">
-            <a href="https://www.facebook.com/rokus.gimnasio"target="_blank"><i
+            <a href="https://www.facebook.com/rokus.gimnasio" target="_blank"><i
                     class="fab fa-facebook-square containerFooter--blanco"></i></a>
-            <a href="https://www.instagram.com/rokus_gimnasio"target="_blank"><i
+            <a href="https://www.instagram.com/rokus_gimnasio" target="_blank"><i
                     class="fab fa-instagram containerFooter--blanco"></i></a>
 
-            <a href="https://www.youtube.com/channel/UCeM0jYSHeWC67E4jtlGrzQQ"target="_blank"><i
+            <a href="https://www.youtube.com/channel/UCeM0jYSHeWC67E4jtlGrzQQ" target="_blank"><i
                     class="fab fa-youtube containerFooter--blanco"></i></a>
-            <a href="mailto:cseita@hotmail.com"target="_blank"><i class="fas fa-envelope-square containerFooter--blanco"></i></a>
-        </div>
-
-        <div class="containerFooter__whatsapp">
-            <a href="https://wa.me/<5493425466513>"target="_blank">Escribinos!
-                <span class="material-icons-outlined">whatsapp
+            <a href="mailto:cseita@hotmail.com" target="_blank"><i
+                    class="fas fa-envelope-square containerFooter--blanco"></i></a>
+            <a class="containerFooter--blanco" href="https://wa.me/<5493425466513>" target="_blank">
+                <span class="material-icons-outlined">
+                    whatsapp
                 </span>
             </a>
         </div>
+        <div class="containerFooter__terminos">
+            <a class="containerFooter__links" href="./vistas/404.html">Terminos y condiciones</a>
+            <a class="containerFooter__links" href="./vistas/404.html">Politica de Privacidad</a>
+        </div>
+        
     </footer>
 
     <script src="https://kit.fontawesome.com/2878ee037e.js" crossorigin="anonymous"></script>
