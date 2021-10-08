@@ -67,6 +67,9 @@ header {
   font-size: 1.5rem;
   font-weight: bolder;
   color: white;
+  background-color: rgb(255, 193, 7);
+  width:250px;
+  margin-left: 5%;
 }
 .dropdown-menu{
   background-color: transparent;
@@ -79,11 +82,13 @@ header {
 
 .navbar-dark .navbar-nav .nav-link{
   margin-left: 5%;
+  margin-bottom: 5%;
+  padding-left: 5%;
   text-shadow: 3px 1px rgb(55, 54, 54);
-  font-size: 1.5rem;
   font-weight: 700; 
   color: white;
-  
+  background-color: rgb(255, 193, 7);
+  width: 100px;
 }
 
 .imagenLogo:hover {
@@ -317,8 +322,11 @@ header {
 .instituto .instituto__titulo {
   color: white;
   text-align: center;
+  font-weight: bolder;
   font-size: 2rem;
   padding: 7%;
+  background-color:rgb(255, 193, 7);
+  
 }
 
 .instituto .instituto__parrafo {
@@ -355,9 +363,11 @@ header {
 
 .infoPilates .infoPilates__title {
   font-size: 1.5rem;
+  font-weight: bolder;
   color: whitesmoke;
   text-align: center;
   justify-content: center;
+  background-color: rgb(255, 193, 7);
 }
 
 .infoPilates .infoPilates__text {
@@ -383,9 +393,11 @@ header {
 
 .infoMujer .infoMujer__title {
   text-align: center;
+  font-weight: bolder;
   font-size: 1.5rem;
   color: whitesmoke;
   justify-content: center;
+  background-color: rgb(255, 193, 7);
 }
 
 .infoMujer .infoMujer__text {
@@ -412,8 +424,10 @@ header {
 .infoPower .infoPower__title {
   text-align: center;
   font-size: 1.5rem;
+  font-weight: bolder;
   color: whitesmoke;
   justify-content: center;
+  background-color: rgb(255, 193, 7);
 
 }
 
@@ -439,6 +453,8 @@ header {
 }
 
 .tituloActividad h2 {
+  width: 90%;
+  margin: auto;
   font-size: 1.8rem;
   color: white;
   text-align: center;
@@ -448,7 +464,7 @@ header {
 
 .containerActividad {
   padding: 5%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: white;
   width: 100%;
   justify-content: center;
@@ -486,7 +502,6 @@ header {
 }
 
 .contenido .contenido__subTitulo {
-  font-size: 1.1rem;
   font-weight: bolder;
   text-align: left;
   border-top: solid rgb(255, 193, 7);
@@ -645,6 +660,7 @@ header {
 .navbar-dark .navbar-nav .nav-link {
     font-size: 2rem;
     text-shadow: none;
+    width: 150px;
 
   }
 
@@ -759,7 +775,6 @@ ERROR
     padding: 3%;
     font-size: 1.3rem;
   }
-
   .modalidad {
     padding: 3%;
     width: 50%;
@@ -824,8 +839,11 @@ ERROR
   .navbar-dark .navbar-nav .nav-link {
     background-color:rgb(255, 193, 7) ;
     width: max-content;
+   
   }
-
+.nav-item{
+  margin-right: 5%;
+}
   /* ------------------------------------------------------
   MAIN 
   -----------------------------------------------------------*/
