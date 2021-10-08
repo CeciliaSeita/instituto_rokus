@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https: //fonts.googleapis.com/css2? family = Poppins: wght @ 500 & display = swap " rel=" stylesheet ">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Contacto Rokus</title>
 </head>
@@ -61,7 +62,7 @@
     </header>
 
     <main class="formulario formDoble">
-        <div class="formLogin">
+        <div data-aos="flip-left" class="formLogin">
             <form action="#" method="POST" class="fondo-gris">
                 <label for="nombre">Nombre</label>
                 <input class="usuario" type="text" id="nombre" required>
@@ -69,7 +70,7 @@
                 <label for="apellido">Apellido</label>
                 <input class="usuario" type="text" id="apellido" required>
                 <br>
-                <label for="email">email</label>
+                <label for="email">Email</label>
                 <input class="usuario" type="email" id="email" required>
                 <br>
                 <label for="pais">Pais</label>
@@ -83,7 +84,7 @@
             </form>
         </div>
 
-        <div class="formLogin formCursos">
+        <div data-aos="flip-right" class="formLogin formCursos">
             <form action="#" method="POST">
                 <p>En que curso estas interesado?</p>
                 <input type="radio" name="cursos" value="pilates">Pilates
@@ -106,7 +107,7 @@
                 <label for="condiciones">Acepta Terminos y condiciones</label>
                 <br>
                 <button class="botonLogin" type="reset" name="resetear">Resetear</button>
-                <button class="botonLogin" type="submit" name="Enviar">Enviar</button>
+                <button class="botonLogin" type="submit" name="Enviar" > <a href="../vistas/404.html">Enviar</a> </button>
             </form>
         </div>
     </main>
@@ -123,15 +124,15 @@
                     class="fab fa-youtube containerFooter--blanco"></i></a>
             <a href="mailto:cseita@hotmail.com" target="_blank"><i
                     class="fas fa-envelope-square containerFooter--blanco"></i></a>
-            <a class="containerFooter--blanco" href="https://wa.me/<5493425466513>" target="_blank">
+            <a class="containerFooter--blanco" href="https://wa.me/5493425466513" target="_blank">
                 <span class="material-icons-outlined">
                     whatsapp
                 </span>
             </a>
         </div>
         <div class="containerFooter__terminos">
-            <a class="containerFooter__links" href="./vistas/404.html">Terminos y condiciones</a>
-            <a class="containerFooter__links" href="./vistas/404.html">Politica de Privacidad</a>
+            <a class="containerFooter__links" href="../vistas/404.html">Terminos y condiciones</a>
+            <a class="containerFooter__links" href="../vistas/404.html">Politica de Privacidad</a>
         </div>
 
     </footer>
@@ -143,6 +144,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 
 </body>
 

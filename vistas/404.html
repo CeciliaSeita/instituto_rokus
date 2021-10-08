@@ -13,23 +13,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https: //fonts.googleapis.com/css2? family = Poppins: wght @ 500 & display = swap " rel=" stylesheet ">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Pagina404</title>
 </head>
 
 <body>
-    <main>
-        <div class="error">
-            <img src="../resources/mistake.jpg" alt="">
-
-        </div>
-        <div class="main-content">
-            <h1> ERROR 404 - PAGE NOT FOUND</h1>
+    <main class="containerError">
+        <div data-aos="zoom-out-down" class="contentError">
+            <h1> ERROR 404</h1>
+            <p>PAGE NOT FOUND</p>
             <button type="button" class="btn btn-warning">
                 <a href="../index.html">VOLVER AL INICIO</a>
             </button>
             
         </div>
     </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
   
 </body>

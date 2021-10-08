@@ -13,17 +13,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https: //fonts.googleapis.com/css2? family = Poppins: wght @ 500 & display = swap " rel=" stylesheet ">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">    
     <title>Cursos Rokus</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+            
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+            
             <div class="container">
                 <a class="navbar-brand imagenLogo" href="../index.html"><img src="../resources/logo-amarillo.png"
                         alt="logo Rokus" width="160" height="160"></a>
             </div>
+            <div class="capa"></div>
+                
+            
 
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -63,8 +69,7 @@
         <div class="instituto">
             <p class="instituto__titulo"> Por que estudiar en ROKUS? </p>
             <p class="instituto__parrafo"> ROKUS es una institución que brinda a la ciudad de Santa Fe la oportunidad de
-                desarrollar actividades
-                recreativas y deportivas destinadas al cuidado de la salud y bienestar general. Con más de 20 años de
+                desarrollar actividades recreativas y deportivas destinadas al cuidado de la salud y bienestar general. Con más de 20 años de
                 experiencia en el sector, y gracias al desarrollo junto a grandes expertos, esta institución decidió
                 comenzar con sus ciclos de Capacitaciones y Formaciones Profesionales
                 Con un enfoque integrado, el egresado acreditará una sólida base teórica y práctica de conocimientos
@@ -72,10 +77,12 @@
                 física personalizada o grupal y llevarlas a cabo con las mayores posibilidades de éxito. Para lograr
                 esos objetivos un equipo de docentes de nivel y prestigio internacional acompaña a los alumnos durante
                 todo el proceso formativo a través de asesoramiento en línea, actividades de evaluación y foros.
-                <span class="instituto--negritas"> Especialmente destinado a estudiantes de Educación Física osimilares,
+                Especialmente destinado a estudiantes de Educación Física osimilares,
                 Profesores y Licenciados,nuestros diferentes cursos permiten ampliar conocimientos como así también 
                 generar nuevas oportunidades laborales en un campo tan amplio como lo es el del entrenamiento y el 
-                deporte.</span>100% VIRTUAL -  El curso se dicta a través de una plataforma aula-web. Allí, el alumno recibe el material teórico,
+                deporte. 
+                <br>
+                100% VIRTUAL -  El curso se dicta a través de una plataforma aula-web. Allí, el alumno recibe el material teórico,
                 ejercicios prácticos y devoluciones personalizadas, ademas de interactuar con sus compañeros de grupo.
                 Si el alumno no puede estar en línea al momento de la clase, la misma se envía al día siguiente grabada,
                 tal es que puede realizar la cursada completa de ese modo, es decir sin asistir en vivo.
@@ -85,11 +92,11 @@
 
 
         <div class="containerCursos">
-            <div class="imagenPilates">
+            <div data-aos="fade-right" class="imagenPilates">
                 <img src="../resources/pilates.png" alt="Pilates Reformer">
             </div>
 
-            <div class="infoPilates">
+            <div data-aos="fade-left" class="infoPilates">
                 <p class="infoPilates__title"> CURSO DE PILATES REFORMER</p>
                 <p class="infoPilates__text"> Este curso tiene como objetivo, dar a conocer la técnica de Pilates
                     reformer  con sus diferentes combinaciones en relación a las necesidades del hombre y la mujer actual.
@@ -105,11 +112,11 @@
                 <a class="infoPilates__link" href="./pilates.html"> Mas información</a>
             </div>
 
-            <div class="imagenMujer">
+            <div data-aos="fade-right" class="imagenMujer">
                 <img src="../resources/mujer.png" alt="Entrenamiento mujer">
             </div>
 
-            <div class="infoMujer">
+            <div data-aos="fade-left" class="infoMujer">
                 <p class="infoMujer__title"> CURSO DE ENTRENAMIENTO PARA LA MUJER</p>
                 <p class="infoMujer__text">Este curso tiene como objetivo, dar a conocer la técnica de Hipertrofia
                     con sus diferentes combinaciones.
@@ -126,12 +133,12 @@
                 <a class="infoMujer__link" href="./emujer.html"> Mas información</a>
             </div>
 
-            <div class="imagenPower">
+            <div data-aos="fade-right" class="imagenPower">
                 <img src="../resources/power-box.png" alt="Power Box">
                 
             </div>
 
-            <div class="infoPower">
+            <div data-aos="fade-left" class="infoPower">
                 <p class="infoPower__title"> CURSO DE POWER BOX</p>
                 <p class="infoPower__text"> El objetivo del curso es formar profesores e instructores en la disciplina que es el boxeo
                     recreativo, brindándoles las herramientas y conocimientos necesarios para la planificación y
@@ -147,28 +154,28 @@
     <br>
 
     <footer class="containerFooter">
+
+        <div class="containerFooter__redes">
+            <a href="https://www.facebook.com/rokus.gimnasio" target="_blank"><i
+                    class="fab fa-facebook-square containerFooter--blanco"></i></a>
+            <a href="https://www.instagram.com/rokus_gimnasio" target="_blank"><i
+                    class="fab fa-instagram containerFooter--blanco"></i></a>
+
+            <a href="https://www.youtube.com/channel/UCeM0jYSHeWC67E4jtlGrzQQ" target="_blank"><i
+                    class="fab fa-youtube containerFooter--blanco"></i></a>
+            <a href="mailto:cseita@hotmail.com" target="_blank"><i
+                    class="fas fa-envelope-square containerFooter--blanco"></i></a>
+            <a class="containerFooter--blanco" href="https://wa.me/5493425466513" target="_blank">
+                <span class="material-icons-outlined">
+                    whatsapp
+                </span>
+            </a>
+        </div>
         <div class="containerFooter__terminos">
             <a class="containerFooter__links" href="../vistas/404.html">Terminos y condiciones</a>
             <a class="containerFooter__links" href="../vistas/404.html">Politica de Privacidad</a>
         </div>
-
-        <div class="containerFooter__redes">
-            <a href="https://www.facebook.com/rokus.gimnasio"target="_blank"><i
-                    class="fab fa-facebook-square containerFooter--blanco"></i></a>
-            <a href="https://www.instagram.com/rokus_gimnasio"target="_blank"><i
-                    class="fab fa-instagram containerFooter--blanco"></i></a>
-
-            <a href="https://www.youtube.com/channel/UCeM0jYSHeWC67E4jtlGrzQQ"target="_blank"><i
-                    class="fab fa-youtube containerFooter--blanco"></i></a>
-            <a href="mailto:cseita@hotmail.com"target="_blank"><i class="fas fa-envelope-square containerFooter--blanco"></i></a>
-        </div>
-
-        <div class="containerFooter__whatsapp">
-            <a href="https://wa.me/<5493425466513>"target="_blank">Escribinos!
-                <span class="material-icons-outlined">whatsapp
-                </span>
-            </a>
-        </div>
+        
     </footer>
 
     <script src="https://kit.fontawesome.com/2878ee037e.js" crossorigin="anonymous"></script>
@@ -178,7 +185,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
     </script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

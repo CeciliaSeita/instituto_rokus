@@ -14,6 +14,7 @@
 
     <link href="https: //fonts.googleapis.com/css2? family = Poppins: wght @ 500 & display = swap " rel=" stylesheet ">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Instituto Rokus - Cecilia Seita</title>
 </head>
@@ -29,9 +30,6 @@
                             alt="logo Rokus" width="160" height="160"></a>
                 </div>
                 <div class="capa"></div>
-
-
-
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -66,18 +64,17 @@
             </nav>
         </header>
 
-        <Main>
+        <Main class="main">
             <section class="portada">
                 <div>
                     <img class="imagenPortada" alt="Estudiar en Rokus" src="./resources/estudiar (1).jpg">
                 </div>
-                <div class="cursos">
-                    <div class="main-content">
+                <div  class="cursos">
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="main-content">
                         <p>CONSTRUYE TU FUTURO</p>
                         <h1>CURSOS EN LINEA</h1>
-                        <button type="button" class="btn btn-warning">
-                            <a href="./vistas/contacto.html">CONTACTANOS</a>
-                        </button>
                     </div>
                 </div>
             </section>
@@ -88,7 +85,9 @@
                 </div>
 
                 <div class="cursos">
-                    <div class="main-content">
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="main-content">
                         <h2>QUE PODES ESTUDIAR EN ROKUS?</h2>
                         <button type="button" class="btn btn-warning">
                             <a href="./vistas/cursos.html">CURSOS</a>
@@ -102,7 +101,9 @@
                     <img class="imagenPortada" src="./resources/servicio (1).jpg" alt="cursos">
                 </div>
                 <div class="cursos">
-                    <div class="main-content">
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="main-content">
                         <h2>QUE SERVICIOS BRINDA ROKUS?</h2>
                         <button type="button" class="btn btn-warning">
                             <a href="./vistas/servicios.html"> SERVICIOS</a>
@@ -125,7 +126,7 @@
                         class="fab fa-youtube containerFooter--blanco"></i></a>
                 <a href="mailto:cseita@hotmail.com" target="_blank"><i
                         class="fas fa-envelope-square containerFooter--blanco"></i></a>
-                <a class="containerFooter--blanco" href="https://wa.me/<5493425466513>" target="_blank">
+                <a class="containerFooter--blanco" href="https://wa.me/5493425466513" target="_blank">
                     <span class="material-icons-outlined">
                         whatsapp
                     </span>
@@ -145,6 +146,10 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
 </body>

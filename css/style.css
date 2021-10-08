@@ -44,14 +44,8 @@ header {
   margin-right: 30%;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  font-weight: 700;
-  font-size: 18px;
-  color: white;
-}
-
 .navbar-toggler {
-  background-color: rgb(33, 32, 32);
+  background-color: rgb(255, 193, 7);
 }
 
 .container {
@@ -72,11 +66,24 @@ header {
 .dropdown-item {
   font-size: 1.5rem;
   font-weight: bolder;
+  color: white;
 }
-
+.dropdown-menu{
+  background-color: transparent;
+}
 .nav-item {
   width: 100%;
   font-size: 1.8rem;
+}
+
+
+.navbar-dark .navbar-nav .nav-link{
+  margin-left: 5%;
+  text-shadow: 3px 1px rgb(55, 54, 54);
+  font-size: 1.5rem;
+  font-weight: 700; 
+  color: white;
+  
 }
 
 .imagenLogo:hover {
@@ -92,7 +99,7 @@ header {
 /*----------------------------------------------------------------
   MAIN
   ------------------------------------------------------------------*/
-main {
+.main {
   z-index: -1;
   grid-area: main;
   display: grid;
@@ -117,7 +124,7 @@ main {
   height: 100%;
 }
 
-.sessiones {
+.sesiones {
   grid-area: sesiones;
   width: 100%;
   height: 100%;
@@ -142,7 +149,6 @@ main {
 
 .main-content {
   color: white;
-  z-index: +1;
   padding-top: 30%;
   margin: auto;
   text-align: center;
@@ -185,13 +191,15 @@ main {
   ------------------------------------------------------------ */
 .formulario {
   background-image: url("../resources/fondoladrillo.jpg");
+  display: block;
   width: 100%;
   height: 110vh;
   padding-top: 5%;
   padding-bottom: 5%;
 }
 
-.formLogin {
+
+.formSimple {
   background-color: black;
   color: white;
   text-align: center;
@@ -204,13 +212,10 @@ main {
   margin-top: 150px;
 }
 
-
-
-.formLogin a {
+.formSimple a {
   color: white;
   text-decoration: none;
 }
-
 .usuario {
   width: 97%;
   background-color: white;
@@ -235,6 +240,19 @@ main {
 /*----------------------------------------------------------
   CONTACTO
   ------------------------------------------------------------ */
+
+  .formLogin {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 90%;
+    padding: 30px;
+    margin: auto;
+    border-radius: 6px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-top: 150px;
+  }
 .formLogin p {
   background-color: rgb(255, 193, 7);
   color: black;
@@ -243,8 +261,12 @@ main {
 
 .formLogin .botonLogin {
   width: 50%;
+  
 }
-
+.botonLogin a{
+  text-decoration: none;
+  color:black;
+}
 .formDoble {
   display: inline-block;
   height: 50%;
@@ -274,22 +296,25 @@ main {
   CURSOS 
   --------------------------------------------------------------*/
 .presentacionCursos {
-  background-image: url("../resources/fondo-login.jpg");
-  background-size: contain;
-  margin-top: 0%;
-  margin-left: 0%;
-  margin-right: 0%;
+  background-image: url("../resources/fondoladrillo.jpg");  
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "presentacion" "contCursos";
 }
-
 .instituto {
-  background-image: url("../resources/fondo-login.jpg");
+  grid-area: presentacion;
+  background-color: black;
+  width: 90%;
+  padding: 3%;
   margin: auto;
-  max-width: 100%;
-  padding: 7%;
+  margin-top: 150px;
+  color: white;
+  
+ 
 }
-
 .instituto .instituto__titulo {
-  margin-top: 200px;
   color: white;
   text-align: center;
   font-size: 2rem;
@@ -297,28 +322,41 @@ main {
 }
 
 .instituto .instituto__parrafo {
-  color: black;
   font-size: 1.5rem;
   text-align: justify;
-}
 
-.instituto .instituto__parrafo .instituto--negritas {
-  font-weight: bolder;
 }
 
 .containerCursos {
-  margin: 0%;
-  width: 100%;
+  grid-area: contCursos;
+  margin: auto;
+  width: 90%;
+  color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content ;
+  grid-template-areas:"imgPilates"
+  "iPilates"
+  "imgMujer"
+  "iMujer"
+  "imgPower"
+  "iPower" ;
 }
 
 .infoPilates {
+  margin: auto;
+  background-color: black;
+  grid-area: iPilates;
   padding: 5%;
   text-align: justify;
+  height: min-content;
+  
 }
 
 .infoPilates .infoPilates__title {
   font-size: 1.5rem;
   color: whitesmoke;
+  text-align: center;
   justify-content: center;
 }
 
@@ -329,12 +367,22 @@ main {
 .infoPilates .infoPilates__link {
   color: whitesmoke;
 }
+.imagenPilates{
+  grid-area: imgPilates;
+}
+.imagenPilates img{
+  width: 100%;
+}
 
 .infoMujer {
+  background-color: black;
+  grid-area: iMujer;
   padding: 5%;
+  margin: auto;
 }
 
 .infoMujer .infoMujer__title {
+  text-align: center;
   font-size: 1.5rem;
   color: whitesmoke;
   justify-content: center;
@@ -347,15 +395,26 @@ main {
 .infoMujer .infoMujer__link {
   color: whitesmoke;
 }
-
+.imagenMujer{
+  grid-area: imgMujer;
+}
+.imagenMujer img{
+  width: 100%;
+}
 .infoPower {
+  grid-area: iPower;
+  background-color: black;
   padding: 5%;
+  margin: auto;
+  margin-bottom: 5%;
 }
 
 .infoPower .infoPower__title {
+  text-align: center;
   font-size: 1.5rem;
   color: whitesmoke;
   justify-content: center;
+
 }
 
 .infoPower .infoPower__text {
@@ -365,15 +424,18 @@ main {
 .infoPower .infoPower__link {
   color: whitesmoke;
 }
-
+.imagenPower{
+  grid-area: imgPower;
+}
+.imagenPower img{
+  width: 100%;
+}
 /* -------------------------------------------------
   pilates/box/emujer
   -------------------------- */
 .tituloActividad {
-  padding-top: 225px;
-  background-color: gray;
+  padding-top: 150px; 
   padding-bottom: 0%;
-  height: 280px;
 }
 
 .tituloActividad h2 {
@@ -385,7 +447,6 @@ main {
 }
 
 .containerActividad {
-  background-image: url("../resources/fondo-login.jpg");
   padding: 5%;
   font-size: 1rem;
   color: white;
@@ -402,6 +463,7 @@ main {
   font-size: 1.3rem;
   font-weight: bolder;
   text-align: center;
+  background-color:rgb(255, 193, 7) ;
 }
 
 .modalidad .modalidad__parrafo {
@@ -416,6 +478,7 @@ main {
   font-size: 1.3rem;
   font-weight: bolder;
   text-align: center;
+  background-color: rgb(255, 193, 7);
 }
 
 .contenido .contenido__parrafo {
@@ -426,6 +489,8 @@ main {
   font-size: 1.1rem;
   font-weight: bolder;
   text-align: left;
+  border-top: solid rgb(255, 193, 7);
+  padding-top: 2%;
 }
 
 .contenido .contenido--instructor {
@@ -436,16 +501,24 @@ main {
   SERVICIOS 
   ------------------------------------------------------------------*/
 .containerServicios {
+  background-image: url("../resources/fondoladrillo.jpg");
   margin-top: 0%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "coach" "nutri";
   text-align: justify;
-  background-image: url("../resources/fondo-login.jpg");
   width: 100%;
-  height: max-content;
   color: whitesmoke;
 }
 
-.containerServicios .containerServicios__div {
-  padding: 7%;
+.containerServicios .containerServicios__divCoach {
+  grid-area: coach;
+  background-color: black;
+  width: 90%;
+  margin: auto;
+  padding: 3%;
+  margin-top: 150px;
 }
 
 .containerServicios .containerServicios__link {
@@ -453,21 +526,28 @@ main {
   text-align: center;
   display: block;
   font-size: 1.5 rem;
+  background-color: rgb(255, 193, 7);
 }
 
 .containerServicios .containerServicios__titulo {
-  margin-top: 200px;
+  background-color: rgb(255, 193, 7);
   color: white;
   text-align: center;
   font-size: 2rem;
 }
 
 .containerServicios .containerServicios__parrafo {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
-.containerServicios .containerServicios__sinTop {
-  margin-top: 10px;
+.containerServicios .containerServicios__divNutri {
+  background-color: black;
+  grid-area: nutri;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 3%;
 }
 
 /* ------------------------------------------------------
@@ -519,12 +599,38 @@ main {
   transform: scale(1.5);
   transition-duration: 2s;
 }
-
-.error {
-  height: 40vh;
-  display: flex;
+/* ---------------------------------------------------
+404
+---------------------------------------------------------- */
+.containerError { 
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../resources/mistake.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ display: flex;
 }
 
+.contentError{
+  background-color: black;
+  padding: 4%;
+  margin: auto;
+  margin-top: 150px;
+  width: 70%;
+  height: 30%;
+  text-align: center;
+  color: white;
+}
+.contentError h1{ 
+  padding: 2%;
+  color: white;
+  text-align: center;
+}
+.contentError a{
+  text-decoration: none;
+  color: white;
+}
 /* -------------------------------------------------------------- 
   MEDIA QUERY MIN 576
   -------------------------------------------------------------*/
@@ -535,9 +641,10 @@ main {
   MAIN
   ------------------------------------------ */
 
-  .nav-item {
-    background-color: rgb(255, 193, 7);
-    padding: 2% 5%;
+
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 2rem;
+    text-shadow: none;
 
   }
 
@@ -565,36 +672,16 @@ main {
     text-shadow: -4px 1px rgb(55, 54, 54);
   }
 
-  .error {
-    height: 80vh;
-    margin: auto;
-    background-color: grey;
-  }
+/* ------------------------------------------------------------
+ERROR
+-------------------------------------------------------------- */
+.contentError{
+  background-color:black;
+  width: 30%;
+  height: 30%;
+}
 
-  .error img {
-    margin: auto;
-  }
-
-  /* -----------------------------------------------------------
-  SERVICIOS 
-  -------------------------------------------------------------*/
-  .containerServicios .containerServicios__parrafo {
-    font-size: 1.5rem;
-    color: black;
-  }
-
-  .containerServicios .containerServicios__div {
-    width: 50%;
-  }
-
-  .servicios {
-    display: flex;
-  }
-
-  .containerServicios .containerServicios__sinTop {
-    margin-top: 100px;
-  }
-
+ 
   /* -----------------------------------------------------------
   login 
   ---------------------------------------------------------------*/
@@ -602,15 +689,17 @@ main {
     padding-top: 50px;
   }
 
-  .formLogin {
+  .formSimple {
     margin-top: 100px;
     width: 40%;
     padding: 30px;
     border-radius: 6px;
     font-weight: bolder;
-
   }
-
+  .formSimple{
+    margin-top: 150px;
+    width: 40%;
+  }
   /*------------------------------------------------------------------
   contacto
   ---------------------------------------------------------------------- */
@@ -625,10 +714,14 @@ main {
   grid-area: login;
   width: 80%;
   margin: auto;
+  margin-top: 100px;
+  padding: 30px;
+  border-radius: 6px;
+  font-weight: bolder;
 }
   .formCursos {
     grid-area: cursos;    
-    margin-top: 110px;
+    margin-top: 100px;
     border-radius: 6px;
     font-weight: bolder;
   }
@@ -636,30 +729,35 @@ main {
   /* ---------------------------------------------
   cursos
   -------------------------------------------------- */
-  .containerCursos {
-    margin: auto;
-    width: 100%;
+  .presentacionCursos{
+    grid-template-rows: min-content;
   }
-
-  .imagenPilates {
-    width: max-content;
-  }
-
-  .instituto .instituto__titulo {
+  .imagenPilates{
     margin-top: 5%;
   }
 
   /* -------------------------------------------------------------
   PILATES/BOX/EMUJER
   -----------------------------------------------------------------*/
+  .tituloActividad{
+    background-color: black;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 3%;
+  }
+  .actividades{
+    background-image: url("../resources/fondoladrillo.jpg");
+    height: 90%;
+  }
   .containerActividad {
-    margin-top: 0%;
+    background-color: black;
+    width: 90%;
+    margin: 5% auto ;
     justify-content: center;
     display: flex;
     align-items: start;
     padding: 3%;
-    font-size: 1.5rem;
-    color: black;
+    font-size: 1.3rem;
   }
 
   .modalidad {
@@ -719,31 +817,28 @@ main {
   MEDIA QUERY MIN 1024
   ------------------------------------------------ */
 @media only screen and (min-width: 1024px) {
+
+  /* ----------------------------------------------------------
+  NAV
+  ------------------------------------------------------------- */
+  .navbar-dark .navbar-nav .nav-link {
+    background-color:rgb(255, 193, 7) ;
+    width: max-content;
+  }
+
+  /* ------------------------------------------------------
+  MAIN 
+  -----------------------------------------------------------*/
+
   .container-fluid {
     width: 100%;
   }
-
-  .containerServicios {
-    display: flex;
-  }
-
-  .containerCursos p {
-    width: 95vh;
-    text-align: justify;
-  }
-
-  .containerCursos h6 {
-    width: 70vw;
-  }
-
   .main-content {
     padding-top: 15%;
   }
-
   .main-content p {
     font-size: 3rem;
   }
-
   .main-content h1 {
     font-size: 6rem;
   }
@@ -752,36 +847,59 @@ main {
   /*----------------------------------------------
     LOGIN--------------------------------------------------- */
   .formulario {
-    height: 100vh;
+    height: 100vh;  
   }
-
-  .formLogin {
-    height: 90%;
+  .formSimple {
     text-align: center;
+    width: 30%;
   }
 
 /* -------------------------------------------------------------
 CONTACTO 
 -------------------------------------------------------------------*/
-.formCursos{
- margin-top: 4%;
-}
+
 .formDoble{
   padding-top: 150px;
   height: 100%;
 }
+.formLogin {
+  height: 90%;
+  text-align: center;
+}
+.formCursos form{
+  text-align: left;
+}
 
-  /* --------------------------------------------------
-  CURSOS
-  ---------------------------------------------------------*/
+/* -------------------------------------------------------------
+SERVICIOS
+--------------------------------------------------- */
+.containerServicios{
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "coach nutri";
+}
+.containerServicios .containerServicios__divNutri{
+  margin-top: 150px;
+}
+/* --------------------------------------------------
+CURSOS
+---------------------------------------------------------*/
   .presentacionCursos {
     width: 100%;
   }
-
+  .instituto{
+    margin-bottom: 3%;
+  }
+  .instituto__parrafo {
+    line-height: 200%;
+  }
+  .instituto .instituto__titulo{
+    padding: 2%;
+  }
   .containerCursos {
     margin: 0%;
     padding-bottom: 3%;
-    padding-left: 7%;
+    padding-left: 5%;
     display: grid;
     width: 100%;
     align-items: center;
@@ -791,13 +909,30 @@ CONTACTO
       "imagenMujer infoMujer"
       "imagenPower infoPower";
   }
+.infoPilates{
+grid-area: infoPilates;
+padding:3%;
+width: 90%;
+margin-bottom: 2%;
+}
 
-  .instituto__parrafo {
-    line-height: 200%;
-  }
+.infoMujer{
+grid-area: infoMujer;
+padding:3%;
+width: 90%;
+margin-bottom: 2%;
+}
+.infoPower{
+grid-area: infoPower;
+padding:3%;
+width: 90%;
+margin-bottom: 2%;
+margin-top: 2%;
+}
 
   .imagenPilates {
     grid-area: imagenPilates;
+    
   }
 
   .imagenMujer {
@@ -807,7 +942,13 @@ CONTACTO
   .imagenPower {
     grid-area: imagenPower;
   }
-
+/* ------------------------------------------------------------
+ERROR
+-------------------------------------------------------------- */
+.contentError{ 
+  width: 20%;
+  height: 30%;
+}
   /* --------------------------------------------------------
   footer 
   ---------------------------------------------------------*/
