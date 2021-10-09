@@ -1,600 +1,944 @@
 // VARIABLES
 
-$fondo_paginas: url("../resources/fondo-login.jpg");
+$fondo_paginas: url("../resources/fondoladrillo.jpg");
+$fondo_amarillo: rgb(255, 193, 7);
 
 html {
-    font-size: 62.5%;
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box; }
-  
-  body {
-    font-size: 16px;
-    background-color: #212529;
-    font-family: 'Poppins', sans-serif;
-    width: 100vw;
-    height: 100%;
-    margin: auto;
-    overflow-x: hidden; }
-  
-  /*------------------------------------------------------------
-  INICIO
-  ---------------------------------------------------------------*/
-  .containerInicio {
-    display: grid;
-    height: 100vh;
-    top: 0%;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 100%;
-    width: 100%;
-    margin: 0 auto;
-    grid-template-areas: 
-      "header"
-      "main"
-      "footer"; }
+  font-size: 62.5%;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+  height: 100%;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+//  INICIO -------------------------------------------------------------
+.containerInicio {
+  display: grid;
+  height: 100vh;
+  top: 0%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 100%;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
 
 // HEADER-------------------------------------------------------------
-  
-  header {
+
+header {
   grid-area: header;
   width: 100%;
   position: fixed;
   margin-top: 0%;
+  padding: 0%;
   z-index: +1;
-  }
-  
-  .navbar-collapse{
-    margin-right: 30%;
-    
-  }
-  .container{
+}
+
+.navbar {
+  padding: 0%;
+
+  .container {
     margin-left: 5%;
     width: 0%;
+    z-index: +2;
+
+    .imagenLogo:hover {
+      transform: scale(1.5);
+      transition-duration: 2s;
+    }
   }
-  .navbar-nav{
+}
+
+.container-fluid {
+  width: 0%;
+  margin-top: 8%;
+
+  .navbar-toggler {
+    background-color: $fondo_amarillo;
+  }
+}
+
+.navbar-collapse {
+  margin-right: 30%;
+}
+
+.navbar-nav {
+  width: 100%;
+  z-index: +2;
+}
+
+.nav-item {
+  width: 100%;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.navbar-collapse .nav-item .nav-link {
+  margin-left: 5%;
+  margin-bottom: 5%;
+  padding-left: 5%;
+  text-shadow: 3px 1px rgb(55, 54, 54);
+  font-weight: 700;
+  color: white;
+  background-color: $fondo_amarillo;
+  width: 100px;
+}
+
+.dropdown-menu {
+  background-color: transparent;
+}
+
+.dropdown-item {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+  background-color: $fondo_amarillo;
+  width: 250px;
+  margin-left: 5%;
+}
+
+//MAIN INDEX -----------------------------------------------------------------
+.main {
+  z-index: -1;
+  grid-area: main;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 100%;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-areas: "portada"
+    "carreras"
+    "sesiones";
+
+  .portada {
+    grid-area: portada;
     width: 100%;
+    height: 100%;
   }
-  .dropdown-menu{
-    background-color: #e1e1e1;;
-    
+
+  .carreras {
+    grid-area: carreras;
+    width: 100%;
+    height: 100%;
   }
-  .dropdown-item{
-    font-size: 1.5rem;  
-    font-weight: bolder;  
+
+  .sesiones {
+    grid-area: sesiones;
+    width: 100%;
+    height: 100%;
   }
-  
-  .nav-item{
-    width: 100%; 
-    padding: 5%;
-    font-size: 1.8rem; 
+
+  .imagenPortada {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  
-  .imagenLogo:hover {
-    transform: scale(1.5);
-    transition-duration: 2s;
-  }
-  .container-fluid{
-    width: 0%;
-  }
-  
-  /*----------------------------------------------------------------
-  MAIN
-  ------------------------------------------------------------------*/
-  main {
-    z-index: -1;
-    grid-area: main;
-  }
-  
-  .carousel-caption h4 {
-    font-size: 2rem;
-    margin-bottom: 3%;   
-    font-weight: bolder;     
-  }
-  
-  .carousel-caption h2 {
-    font-size: 1.5rem;
-    margin-bottom: 3%;
-    font-weight: bolder;
-  }
-  
-  .carousel-caption button {
-    font-size: 1.8rem;
-    font-weight: bolder;    
-  }
-  .carousel-caption button a{
-    font-size: 1rem; 
-    text-decoration: none;
+
+  .cursos {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-  }
-  .carousel-caption  p{
-    font-size: 6rem; 
-    }
-    .error{ 
-      height: 40vh;
-      display: flex; 
-    }
-    .main-content { 
+    text-align: center;
+
+    .main-content {
+      color: white;
       padding-top: 30%;
       margin: auto;
-      color: black;
       text-align: center;
-      background-color: grey;
-      height: 100vh;
+      align-items: center;
+      width: 70vw;
+      justify-content: center;
+      font-size: 1rem;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: bolder;
+        text-shadow: -3px 1px rgb(55, 54, 54);
+      }
+
+      p {
+        font-size: 1.8rem;
+        font-weight: bolder;
+      }
+
+      button {
+        border-radius: 7px;
+
+        &:hover {
+          transform: scale(1.3);
+          transition-duration: 2s;
+        }
+
+      }
+
     }
-    .main-content h1{
-      font-size: 3rem;
-      font-weight: bolder;
-    }
-    .main-content a{
-      color: #cecec3;
-      text-decoration: none;
-      font-size: 1.5rem;
-    }
-  
-  
-  /*----------------------------------------------------------
-  LOGIN 
-  ------------------------------------------------------------ */
-  .formulario {
-    background-image: $fondo_paginas;
-    width: 100%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+
   }
-  
+}
+
+
+// LOGIN -------------------------------------------------
+.formulario {
+  background-image: url("../resources/fondoladrillo.jpg");
+  display: block;
+  width: 100%;
+  height: 110vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+
+.formSimple {
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 90%;
+  padding: 30px;
+  margin: auto;
+  border-radius: 6px;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin-top: 150px;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
+.usuario {
+  width: 97%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.botonLogin {
+  width: 100%;
+  height: 30px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: rgb(255, 193, 7);
+  border-color: rgb(255, 193, 7);
+  font-weight: bold;
+  display: block;
+  border-radius: 5px;
+}
+
+
+// CONTACTO ---------------------------------------
+.formDoble {
+  display: inline-block;
+  height: 50%;
+
   .formLogin {
-    background-color: #4f4f4f;
+    background-color: black;
+    color: white;
+    text-align: center;
     width: 90%;
     padding: 30px;
     margin: auto;
     border-radius: 6px;
     font-weight: bolder;
-    font-size: 1rem; 
-    margin-top: 200px;}
+    font-size: 1.5rem;
+    margin-top: 150px;
 
-    .sinTop{
-    margin-top: 20px;
-    }   
+    p {
+      background-color: $fondo_amarillo;
+      color: black;
+      text-align: center;
+    }
 
-  .formLogin a {
-    color: white; }
-  
-  .usuario {
-    width: 97%;
-    background-color: white;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    border: solid 1px;
-    border-color: yellow; }
-  
-  .botonLogin {
-    width: 100%;
-    height: 45px;
-    margin-top: 15px;
-    background: linear-gradient(to bottom right, #4f4e4e, #f0d97c);
-    font-weight: bold;
-    font-size: 1rem;
-    display: block;
-    margin: auto; }
-  
-  /*----------------------------------------------------------
-  CONTACTO
-  ------------------------------------------------------------ */
-  .formLogin p {
-    background-color: #eff3aa;
-    text-align: center; }
-  
-  .formLogin .botonLogin {
-    background: #cecec3;
-    width: 50%; }
-  
-  /*------------------------------------------------------------
-  CURSOS 
-  --------------------------------------------------------------*/
-  .presentacionCursos {
-    background-image: $fondo_paginas;
-    background-size: contain;
-    margin-top: 0%;
-    margin-left: 0%;
-    margin-right: 0%; }
-  
-  .instituto {
-    background-image: $fondo_paginas; 
+    .botonLogin {
+      width: 50%;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
+  .formCursos {
+    background-color: black;
+    color: white;
+    text-align: left;
+    width: 90%;
+    padding: 30px;
     margin: auto;
-    max-width: 100%;
-    padding: 7%; }
-    .instituto .instituto__titulo {
-      margin-top: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 6px;
+    font-weight: bolder;
+    font-size: 1.4rem;
+
+    p {
+      padding: 2%;
+      margin-top: 6%;
+      margin-bottom: 6%;
+    }
+  }
+}
+
+// CURSOS----------------------------------------------
+.presentacionCursos {
+  background-image: $fondo_paginas;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "presentacion""contCursos";
+
+  .instituto {
+    grid-area: presentacion;
+    background-color: black;
+    width: 90%;
+    padding: 5%;
+    margin: auto;
+    margin-top: 150px;
+    color: white;
+
+    .instituto__titulo {
       color: white;
       text-align: center;
+      font-weight: bolder;
       font-size: 2rem;
-      padding: 7%; }
-    .instituto .instituto__parrafo {
-      color: black;
-      font-size: 1.5rem;
-      text-align: justify; }
-      .instituto .instituto__parrafo .instituto--negritas {
-        font-weight: bolder; }
-  
-  .containerCursos {
-    margin: 0%;
-    width: 100%; }
-  
-  .infoPilates {
-    padding: 5%;
-    text-align: justify; }    
-    .infoPilates .infoPilates__title {
-      font-size: 1.5rem;
-      color: whitesmoke;
-      justify-content: center; }
-    .infoPilates .infoPilates__text {
-      text-align: justify; }
-    .infoPilates .infoPilates__link {
-      color: whitesmoke; }
-  
-  .infoMujer {
-    padding: 5%; }
-    .infoMujer .infoMujer__title {
-      font-size: 1.5rem;
-      color: whitesmoke;
-      justify-content: center; }
-    .infoMujer .infoMujer__text {
-      text-align: justify; }
-    .infoMujer .infoMujer__link {
-      color: whitesmoke; }
-
-  
-  .infoPower {
-    padding: 5%; }
-    .infoPower .infoPower__title {
-      font-size: 1.5rem;
-      color: whitesmoke;
-      justify-content: center; }
-    .infoPower .infoPower__text {
-      text-align: justify; }
-    .infoPower .infoPower__link {
-      color: whitesmoke; }
-  
-  /* -------------------------------------------------
-  pilates/box/emujer
-  -------------------------- */
-  .tituloActividad{
-    padding-top: 225px;
-    background-color: gray;
-    padding-bottom: 0%;
-    height: 280px; 
+      padding: 7%;
+      background-color: $fondo_amarillo;
     }
-    .tituloActividad h2{
+
+    .instituto__parrafo {
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+  }
+
+  .containerCursos {
+    grid-area: contCursos;
+    margin: auto;
+    width: 90%;
+    color: white;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content;
+    grid-template-areas: "imgPilates"
+      "iPilates"
+      "imgMujer"
+      "iMujer"
+      "imgPower"
+      "iPower";
+
+    .imagenPilates {
+      grid-area: imgPilates;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .infoPilates {
+      margin: auto;
+      background-color: black;
+      grid-area: iPilates;
+      padding: 5%;
+
+
+      .infoPilates__title {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: whitesmoke;
+        text-align: center;
+        justify-content: center;
+        background-color: $fondo_amarillo;
+      }
+
+      .infoPilates__text {
+        text-align: justify;
+      }
+
+      .infoPilates__link {
+        color: whitesmoke;
+      }
+    }
+
+    .imagenMujer {
+      grid-area: imgMujer;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .infoMujer {
+      background-color: black;
+      grid-area: iMujer;
+      padding: 5%;
+      margin: auto;
+
+      .infoMujer__title {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        color: whitesmoke;
+        justify-content: center;
+        background-color: $fondo_amarillo;
+      }
+
+      .infoMujer__text {
+        text-align: justify;
+      }
+
+      .infoMujer__link {
+        color: whitesmoke;
+      }
+    }
+
+    .imagenPower {
+      grid-area: imgPower;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .infoPower {
+      grid-area: iPower;
+      background-color: black;
+      padding: 5%;
+      margin: auto;
+      margin-bottom: 5%;
+
+      .infoPower__title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: whitesmoke;
+        justify-content: center;
+        background-color: $fondo_amarillo;
+      }
+
+      .infoPower__text {
+        text-align: justify;
+      }
+
+      .infoPower__link {
+        color: whitesmoke;
+      }
+    }
+  }
+}
+
+// PILATES/BOX/MUJER ------------------------------------------
+
+.actividades {
+  .tituloActividad {
+    padding-top: 150px;
+    padding-bottom: 0%;
+
+    h2 {
+      width: 90%;
+      margin: auto;
       font-size: 1.8rem;
       color: white;
       text-align: center;
       font-weight: bolder;
       margin-bottom: 0%;
-    } 
-  
-  .containerActividad { 
-    background-image: $fondo_paginas;
+    }
+  }
+
+  .containerActividad {
     padding: 5%;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
     width: 100%;
     justify-content: center;
-    align-items: center; }
-  
-  .modalidad {
-    padding: 2%; }
-    .modalidad .modalidad__titulo {
-      font-size: 1.3rem;
-      font-weight: bolder;
-      text-align: center; }
-    .modalidad .modalidad__parrafo {
-      text-align: justify; }
-  
-  .contenido {  
-    padding: 2%; }
-    .contenido .contenido__titulo {
-      font-size: 1.3rem;
-      font-weight: bolder;
-      text-align: center; }
-    .contenido .contenido__parrafo {
-      text-align: justify; }
-    .contenido .contenido__subTitulo {
-      font-size: 1.1rem;
-      font-weight: bolder;
-      text-align: left; }
-    .contenido .contenido--instructor {
-      font-style: oblique; }
-  
-  /* ---------------------------------------------------------------
-  SERVICIOS 
-  ------------------------------------------------------------------*/
-  .containerServicios { 
-    margin-top: 0%;
-    text-align: justify;
-    background-image: $fondo_paginas;
-    width: 100%;
-    height: max-content;
-    color: whitesmoke; }
-  
-    .containerServicios .containerServicios__div {   
-      padding: 7%; }
-    .containerServicios .containerServicios__link {
-      color: white;
-      text-align: center;
-      display: block;
-      font-size: 1.5 rem; }
-    .containerServicios .containerServicios__titulo {
-      margin-top: 200px;
-      color: white;
-      text-align: center;
-      font-size: 2rem; }
-    .containerServicios .containerServicios__parrafo {
-      font-size: 1rem; }
-      .containerServicios .containerServicios__sinTop {
-        margin-top: 10px;
-      }
-  
-  /* ------------------------------------------------------
-  FOOTER
-  ------------------------------------------------------- */
-  .containerFooter {
-    padding: 5%;
-    grid-area: footer;
-    width: 100%;
-    color: white;
-    font-size: 1rem;
-    display: grid;
     align-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "terminos redes whatsapp"; }
-    .containerFooter .containerFooter__links {
+
+    .modalidad {
+      padding: 2%;
+
+      .modalidad__titulo {
+        font-size: 1.3rem;
+        font-weight: bolder;
+        text-align: center;
+        background-color: $fondo_amarillo;
+      }
+
+      .modalidad__parrafo {
+        text-align: justify;
+      }
+    }
+
+    .contenido {
+      padding: 2%;
+
+      .contenido__titulo {
+        font-size: 1.3rem;
+        font-weight: bolder;
+        text-align: center;
+        background-color: $fondo_amarillo;
+      }
+
+      .contenido__parrafo {
+        text-align: justify;
+      }
+
+      .contenido__subTitulo {
+        font-weight: bolder;
+        text-align: left;
+        border-top: solid $fondo_amarillo;
+        padding-top: 2%;
+      }
+
+      .contenido--instructor {
+        font-style: oblique;
+      }
+    }
+  }
+}
+
+// SERVICIOS ----------------------------------------------
+.containerServicios {
+  background-image: $fondo_paginas;
+  margin-top: 0%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "coach""nutri";
+  text-align: justify;
+  width: 100%;
+  color: whitesmoke;
+
+  .containerServicios__divCoach {
+    grid-area: coach;
+    background-color: black;
+    width: 90%;
+    margin: auto;
+    padding: 5%;
+    margin-top: 150px;
+  }
+
+  .containerServicios__divNutri {
+    background-color: black;
+    grid-area: nutri;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5%;
+  }
+
+  .containerServicios__link {
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 1.5 rem;
+    background-color: $fondo_amarillo;
+  }
+
+  .containerServicios__titulo {
+    background-color: $fondo_amarillo;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .containerServicios__parrafo {
+    font-size: 1.5rem;
+  }
+}
+
+// FOOTER ---------------------------------------------------
+.containerFooter {
+  grid-area: footer;
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "redes""terminos";
+
+  .containerFooter__redes {
+    grid-area: redes;
+    text-align: center;
+    padding-top: 5%;
+
+    .containerFooter--blanco {
+      color: white;
+      font-size: 3rem;
+      padding: 2%;
+    }
+
+    .containerFooter__whatsapp a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        transform: scale(1.5);
+        transition-duration: 2s;
+      }
+    }
+  }
+
+  .containerFooter__terminos {
+    text-align: center;
+    grid-area: terminos;
+
+    .containerFooter__links {
       color: white;
       padding: 3%;
       margin-top: 2%;
-      font-size: 1rem; }
-    .containerFooter .containerFooter__terminos {
-      padding-left: 10%;
-      padding-top: 5%;
-      grid-area: terminos;
-      display: flex;
-      flex-direction: column; }
-    .containerFooter .containerFooter__redes {
-      grid-area: redes;
-      flex-direction: column;
-      align-items: center;
-      display: flex;
-      color: white; }
-    .containerFooter .containerFooter--blanco {
-      color: white;
-      font-size: 1.5rem;
-      padding: 2%; }
-    .containerFooter .containerFooter__whatsapp {
-      grid-area: whatsapp;
-      background-color: #90bb90;
-      height: max-content;
-      font-weight: bolder;
-      font-size: 1rem;
-      padding: 5%;
-      border-radius: 10px;}
-      .containerFooter .containerFooter__whatsapp a{
-        text-decoration: none;
-        color:black;
-      }
-      .containerFooter .containerFooter__whatsapp:hover {
-        transform: scale(1.5);
-        transition-duration: 2s; }
-  
-  /* -------------------------------------------------------------- 
-  MEDIA QUERY MIN 576
-  -------------------------------------------------------------*/
-  
-  @media only screen and (min-width: 576px) {
-
-  // MAIN --------------------------------------------------------
-
-  .carousel-caption h4 {
-    font-size: 2rem;
-    margin-bottom: 3%;
-    color: black;
-    font-weight: bolder; }
-  
-  .carousel-caption h5 {
-    font-size: 2rem;
-    margin-bottom: 3%; }
-  
-  .carousel-caption button {
-    font-size: 2rem; }
-  
-  .carousel-caption button a {
-    font-size: 2rem;
-    text-decoration: none;
-    color: white; }
-  
-  .carousel-caption p {
-    font-size: 6rem;}
-
-  // MAIN---------------------------------------------------------
-  .main-content { 
-    padding-top: 2%;
-    margin: auto;
-    color: black;
-  }
-  .main-content h1{   
-    font-size: 6rem;   
-  }
-  .main-content a{   
-    font-size: 2rem;
-  }
-
-  .error{ 
-    height: 80vh;
-    margin: auto;    
-    background-color: grey;  
-  }
-  .error img{
-    margin: auto;
-  }
-  
-  /* -----------------------------------------------------------
-  SERVICIOS 
-  -------------------------------------------------------------*/
-
-    .containerServicios .containerServicios__parrafo {
-      font-size: 1.5rem;
-      color: black; }
-    .containerServicios .containerServicios__div {    
-      width: 50%; }
-    .servicios{
-      display: flex;
-      }
-    .containerServicios .containerServicios__sinTop {
-      margin-top: 100px;
-      }
-  
-  
-  /* -----------------------------------------------------------
-  login 
-  ---------------------------------------------------------------*/
-    .formulario {
-      padding-top: 50px;
+      font-size: 1.2rem;
     }
+  }
+}
+
+// 404 -------------------------------------------------
+.containerError {
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../resources/mistake.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  .contentError {
+    background-color: black;
+    padding: 4%;
+    margin: auto;
+    margin-top: 150px;
+    width: 70%;
+    height: 30%;
+    text-align: center;
+    color: white;
+
+    h1 {
+      padding: 2%;
+      color: white;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+// MEDIA QUERY MIN 576 ----------------------------------
+
+@media only screen and (min-width: 576px) {
+
+  // NAV --------------------------------------------
+
+  .container-fluid {
+    margin-top: 0%;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    font-size: 2rem;
+    text-shadow: none;
+    color: white;
+    width: 150px;
+
+  }
+
+  // MAIN INDEX----------------------------------------
+
+  .main .cursos .main-content {
+    padding-top: 2%;
+
+    h1 {
+      font-size: 4rem;
+      text-shadow: -4px 1px rgb(55, 54, 54);
+    }
+
+    a {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 2rem;
+      text-shadow: -4px 1px rgb(55, 54, 54);
+    }
+  
+}
+  // LOGIN --------------------------------------------
+
+  .formulario {
+    padding-top: 50px;
+
+    .formSimple {
+      width: 40%;
+    }
+  }
+
+  // CONTACTO ---------------------------------------
+
+  .formDoble {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "login cursos";
+
     .formLogin {
-      width: 50%;
+      grid-area: login;
+      width: 80%;
+      margin: auto;
+      margin-top: 100px;
       padding: 30px;
-      margin-top: 150px auto;   
       border-radius: 6px;
       font-weight: bolder;
-      font-size: 1.5rem; }
-    .formLogin {
-      font-size: 1.5rem; }
-    .botonLogin {
-      font-size: 1.5rem;
-      margin: 0%; }
-  
-  
-  /* ---------------------------------------------
-  cursos
-  -------------------------------------------------- */
-  .containerCursos{
-    margin: auto;
-    width: 100%;
+    }
+
+    .formCursos {
+      grid-area: cursos;
+      margin-top: 100px;
+    }
   }
+
+  //  CURSOS ------------------------------------------
+  .presentacionCursos {
+    grid-template-rows: min-content;
+  }
+
   .imagenPilates {
-    width: max-content; }
-  .instituto .instituto__titulo{
     margin-top: 5%;
   }
-  
-    
-    
-  /* -------------------------------------------------------------
-  PILATES/BOX/EMUJER
-  -----------------------------------------------------------------*/
+
+  // PILATES/MUJER/BOX----------------------------------
+
+  .actividades {
+    background-image: $fondo_paginas;
+    height: 90%;
+
+    .tituloActividad {
+      background-color: black;
+      width: 90%;
+      margin: auto;
+      padding-bottom: 3%;
+    }
+
     .containerActividad {
-      margin-top: 0%;
-      justify-content: center;
+      background-color: black;
+      width: 90%;
+      margin: 5% auto;
       display: flex;
       align-items: start;
       padding: 3%;
-      font-size: 1.5rem;
-      color:black;
-    }
-    .modalidad {    
-      padding: 3%;
-      width: 50%; }
-    .modalidad .modalidad__titulo {
-      font-size: 1.8rem;
-      text-align: left; }
-      
-    .contenido {
-      padding: 3%;
-      width: 50%; }
-    .contenido .contenido__titulo {
-      font-size: 1.8rem;
-      text-align: left; }
-    .contenido .contenido__subTitulo {
-      font-size: 1.5rem; }
-    
-  
-  
-  /* ------------------------------------------------------
-  footer 
-  -----------------------------------------------------------*/
-    .containerFooter {
-      grid-template-columns: 1fr 1fr 1fr;
-      align-items: flex-start; }
-    .containerFooter .containerFooter__terminos {
-      width: 90%; }
-    .containerFooter .containerFooter__links {
-      padding: 3%;
-      margin-top: 2%;
-      font-size: 1.5rem; }
-    .containerFooter .containerFooter__redes {
-      justify-content: center;
-      display: inline;
-      margin: auto;
-      width: 100%; }
-    .containerFooter .containerFooter--blanco {
-      font-size: 3rem; }
-    .containerFooter .containerFooter__whatsapp {
-      font-size: 1.5rem;
-      margin-top: 10%;
-      margin: auto; } }
-  
-  
-  
-  
-  /* -----------------------------------------
-  MEDIA QUERY MIN 1024
-  ------------------------------------------------ */
-  @media only screen and (min-width: 1024px) {
+      font-size: 1.3rem;
 
-    .container-fluid{
-      width: 100%;
+      .modalidad {
+        padding: 3%;
+        width: 50%;
+
+        .modalidad__titulo {
+          font-size: 1.8rem;
+          text-align: left;
+        }
+      }
+
+      .contenido {
+        padding: 3%;
+        width: 50%;
+
+        .contenido__titulo {
+          font-size: 1.8rem;
+          text-align: left;
+        }
+
+        .contenido__subTitulo {
+          font-size: 1.5rem;
+        }
+      }
+
     }
-    .containerServicios {
-      display: flex; }
-    .containerCursos p {
-      width: 95vh;
-      text-align: justify; }
-    .containerCursos h6 {
-      width: 70vw; }
-  
-      .main-content { 
-        padding-top: 15%;}
-  /* --------------------------------------------------
-  CURSOS
-  ---------------------------------------------------------*/
-    .presentacionCursos {
-      width: 100%; }
+  }
+
+
+  // 404 --------------------------------------
+  .contentError {
+    background-color: black;
+    width: 30%;
+    height: 30%;
+  }
+}
+
+// MEDIA QUERY MIN 1024 ----------------------------
+
+@media only screen and (min-width: 1024px) {
+
+  // NAV ----------------------------------------
+
+  .navbar-dark .navbar-nav .nav-link {
+    background-color: $fondo_amarillo;
+    width: max-content;
+  }
+
+  .nav-item {
+    margin-right: 5%;
+  }
+
+  .container-fluid {
+    width: 100%;
+  }
+
+  // MAIN ----------------------------------------------
+
+  .main .cursos .main-content {
+    padding-top: 15%;
+
+    p {
+      font-size: 3rem;
+    }
+
+    h1 {
+      font-size: 6rem;
+    }
+  }
+
+  // LOGIN ---------------------------------------------
+
+  .formulario {
+    height: 100vh;
+
+    .formSimple {
+      text-align: center;
+      width: 30%;
+    }
+  }
+
+  // CONTACTO -------------------------------------------
+
+  .formDoble {
+    padding-top: 150px;
+    height: 100%;
+
+    .formLogin {
+      height: 90%;
+      text-align: center;
+    }
+  }
+
+  .formCursos form {
+    text-align: left;
+  }
+
+  // SERVICIOS --------------------------------------------
+  .containerServicios {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "coach nutri";
+
+    .containerServicios__divNutri {
+      margin-top: 150px;
+    }
+  }
+
+  // CURSOS ------------------------------------------
+
+  .presentacionCursos {
+    width: 100%;
+
+    .instituto {
+      margin-bottom: 3%;
+
+      .instituto__parrafo {
+        line-height: 200%;
+      }
+
+      .instituto__titulo {
+        padding: 2%;
+      }
+    }
+
     .containerCursos {
       margin: 0%;
-      padding-left: 7%;
+      padding-bottom: 3%;
+      padding-left: 5%;
       display: grid;
       width: 100%;
       align-items: center;
       grid-template-columns: 1fr 2fr;
       grid-template-rows: 3fr;
       grid-template-areas: "imagenPilates infoPilates"
-    "imagenMujer infoMujer"
-    "imagenPower infoPower"; }
+        "imagenMujer infoMujer"
+        "imagenPower infoPower";
 
-    .instituto__parrafo {
-      line-height: 200%; } 
-    
       .imagenPilates {
-        grid-area: imagenPilates; }
+        grid-area: imagenPilates;
+
+      }
+
+      .infoPilates {
+        grid-area: infoPilates;
+        padding: 3%;
+        width: 90%;
+        margin-bottom: 2%;
+      }
+
       .imagenMujer {
-        grid-area: imagenMujer; }
+        grid-area: imagenMujer;
+      }
+
+      .infoMujer {
+        grid-area: infoMujer;
+        padding: 3%;
+        width: 90%;
+        margin-bottom: 2%;
+      }
+
       .imagenPower {
-        grid-area: imagenPower; }
-  
-  /* --------------------------------------------------------
-  footer 
-  ---------------------------------------------------------*/
-  .containerFooter .containerFooter--blanco {    
-    padding: 5%;
-    font-size: 4rem;}
+        grid-area: imagenPower;
+      }
+
+      .infoPower {
+        grid-area: infoPower;
+        padding: 3%;
+        width: 90%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+      }
+    }
   }
-  
+
+  // 404 -----------------------------------
+  .containerError .contentError {
+    width: 20%;
+    height: 30%;
+  }
+
+  // FOOTER -----------------------------------------
+  .containerFooter .containerFooter--blanco {
+    padding: 5%;
+    font-size: 3rem;
+  }
+}
